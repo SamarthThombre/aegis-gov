@@ -1,0 +1,105 @@
+[2026-03-30 23:41:03] Aegis Governor Initialized. Threshold: 80.000000%
+[2026-03-30 23:41:13] System Admin updated threshold to 1010.000000%
+[2026-03-30 23:41:24] System Admin updated threshold to 1010.000000%
+[2026-03-30 23:41:34] System Admin updated threshold to 1010.000000%
+[2026-03-30 23:41:36] System Admin updated threshold to 100.000000%
+[2026-03-30 23:41:44] System Admin updated threshold to 50.000000%
+[2026-03-30 23:42:07] System Admin updated threshold to 5.055000%
+[2026-03-30 23:42:42] SPIKE DETECTED: CPU at 6.557377%. Scanned 332 PIDs.
+[2026-03-30 23:42:50] SPIKE DETECTED: CPU at 12.711864%. Scanned 340 PIDs.
+[2026-03-30 23:42:56] SPIKE DETECTED: CPU at 5.882353%. Scanned 353 PIDs.
+[2026-03-30 23:42:58] SPIKE DETECTED: CPU at 5.932203%. Scanned 353 PIDs.
+[2026-03-30 23:43:01] SPIKE DETECTED: CPU at 22.881356%. Scanned 350 PIDs.
+[2026-03-30 23:43:09] SPIKE DETECTED: CPU at 7.563025%. Scanned 348 PIDs.
+[2026-03-30 23:43:13] SPIKE DETECTED: CPU at 7.692308%. Scanned 351 PIDs.
+[2026-03-30 23:43:15] SPIKE DETECTED: CPU at 9.917355%. Scanned 351 PIDs.
+[2026-03-30 23:43:19] SPIKE DETECTED: CPU at 5.833333%. Scanned 349 PIDs.
+[2026-03-30 23:43:22] SPIKE DETECTED: CPU at 6.837607%. Scanned 348 PIDs.
+[2026-03-30 23:43:24] SPIKE DETECTED: CPU at 8.403361%. Scanned 349 PIDs.
+[2026-03-30 23:43:26] SPIKE DETECTED: CPU at 29.661017%. Scanned 351 PIDs.
+[2026-03-30 23:43:28] SPIKE DETECTED: CPU at 13.333333%. Scanned 351 PIDs.
+[2026-03-30 23:43:38] SPIKE DETECTED: CPU at 9.836066%. Scanned 346 PIDs.
+[2026-03-30 23:43:43] SPIKE DETECTED: CPU at 7.563025%. Scanned 333 PIDs.
+[2026-03-30 23:44:20] SPIKE DETECTED: CPU at 5.833333%. Scanned 332 PIDs.
+[2026-03-30 23:44:25] SPIKE DETECTED: CPU at 5.084746%. Scanned 333 PIDs.
+[2026-03-30 23:44:27] SPIKE DETECTED: CPU at 5.833333%. Scanned 333 PIDs.
+[2026-03-30 23:44:33] SPIKE DETECTED: CPU at 6.611570%. Scanned 332 PIDs.
+[2026-03-30 23:44:35] SPIKE DETECTED: CPU at 6.666667%. Scanned 333 PIDs.
+[2026-03-30 23:44:37] SPIKE DETECTED: CPU at 5.882353%. Scanned 333 PIDs.
+[2026-03-30 23:44:41] SPIKE DETECTED: CPU at 7.627119%. Scanned 333 PIDs.
+[2026-03-30 23:44:43] SPIKE DETECTED: CPU at 6.666667%. Scanned 333 PIDs.
+[2026-03-30 23:45:04] SPIKE DETECTED: CPU at 5.882353%. Scanned 334 PIDs.
+[2026-03-30 23:45:07] SPIKE DETECTED: CPU at 8.333333%. Scanned 336 PIDs.
+[2026-03-30 23:45:09] SPIKE DETECTED: CPU at 7.563025%. Scanned 336 PIDs.
+[2026-03-30 23:45:11] SPIKE DETECTED: CPU at 5.882353%. Scanned 335 PIDs.
+[2026-03-30 23:45:13] SPIKE DETECTED: CPU at 6.722689%. Scanned 335 PIDs.
+[2026-03-30 23:45:15] SPIKE DETECTED: CPU at 6.779661%. Scanned 334 PIDs.
+[2026-03-30 23:45:17] SPIKE DETECTED: CPU at 8.403361%. Scanned 335 PIDs.
+[2026-03-30 23:45:21] SPIKE DETECTED: CPU at 9.243697%. Scanned 335 PIDs.
+[2026-03-30 23:45:23] SPIKE DETECTED: CPU at 9.166667%. Scanned 335 PIDs.
+[2026-03-30 23:45:25] SPIKE DETECTED: CPU at 10.000000%. Scanned 334 PIDs.
+[2026-03-30 23:45:28] SPIKE DETECTED: CPU at 12.605042%. Scanned 335 PIDs.
+[2026-03-30 23:45:30] SPIKE DETECTED: CPU at 7.563025%. Scanned 336 PIDs.
+[2026-03-30 23:45:32] SPIKE DETECTED: CPU at 8.333333%. Scanned 336 PIDs.
+[2026-03-30 23:45:51] SPIKE DETECTED: CPU at 5.882353%. Scanned 334 PIDs.
+[2026-03-30 23:45:59] SPIKE DETECTED: CPU at 35.000000%. Scanned 335 PIDs.
+[2026-03-30 23:46:01] SPIKE DETECTED: CPU at 8.333333%. Scanned 336 PIDs.
+[2026-03-30 23:46:12] SPIKE DETECTED: CPU at 5.833333%. Scanned 336 PIDs.
+[2026-03-30 23:46:22] SPIKE DETECTED: CPU at 8.403361%. Scanned 334 PIDs.
+[2026-03-30 23:47:17] SPIKE DETECTED: CPU at 16.666667%. Scanned 335 PIDs.
+[2026-03-30 23:48:30] SPIKE DETECTED: CPU at 5.128205%. Scanned 335 PIDs.
+[2026-03-30 23:48:51] SPIKE DETECTED: CPU at 9.917355%. Scanned 340 PIDs.
+[2026-03-30 23:49:00] Aegis Governor Initialized. Threshold: 80.000000%
+[2026-03-30 23:49:04] System Admin updated threshold to 10.000000%
+[2026-03-30 23:49:14] SPIKE DETECTED: CPU at 100.000000%. Targets found: 330 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:49:17] SPIKE DETECTED: CPU at 100.000000%. Targets found: 331 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:49:19] SPIKE DETECTED: CPU at 100.000000%. Targets found: 331 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:49:21] SPIKE DETECTED: CPU at 100.000000%. Targets found: 331 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:49:23] SPIKE DETECTED: CPU at 100.000000%. Targets found: 331 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:49:25] SPIKE DETECTED: CPU at 100.000000%. Targets found: 330 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:49:27] SPIKE DETECTED: CPU at 100.000000%. Targets found: 331 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:49:29] SPIKE DETECTED: CPU at 100.000000%. Targets found: 331 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:49:31] SPIKE DETECTED: CPU at 100.000000%. Targets found: 331 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:49:33] SPIKE DETECTED: CPU at 100.000000%. Targets found: 331 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:49:36] SPIKE DETECTED: CPU at 100.000000%. Targets found: 330 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:49:38] SPIKE DETECTED: CPU at 100.000000%. Targets found: 331 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:49:40] SPIKE DETECTED: CPU at 100.000000%. Targets found: 331 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:49:42] SPIKE DETECTED: CPU at 100.000000%. Targets found: 331 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:49:44] SPIKE DETECTED: CPU at 100.000000%. Targets found: 331 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:51:35] SPIKE DETECTED: CPU at 11.764706%. Targets found: 329 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:51:52] SPIKE DETECTED: CPU at 29.166667%. Targets found: 329 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:52:26] SPIKE DETECTED: CPU at 28.813559%. Targets found: 329 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:55:54] SPIKE DETECTED: CPU at 32.231405%. Targets found: 330 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:55:56] SPIKE DETECTED: CPU at 26.890756%. Targets found: 332 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:03] SPIKE DETECTED: CPU at 24.793388%. Targets found: 337 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:05] SPIKE DETECTED: CPU at 14.285714%. Targets found: 342 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:07] SPIKE DETECTED: CPU at 36.666667%. Targets found: 346 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:09] SPIKE DETECTED: CPU at 14.166667%. Targets found: 349 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:13] SPIKE DETECTED: CPU at 62.393162%. Targets found: 353 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:16] SPIKE DETECTED: CPU at 19.491525%. Targets found: 353 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:20] SPIKE DETECTED: CPU at 60.833333%. Targets found: 351 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:22] SPIKE DETECTED: CPU at 17.094017%. Targets found: 348 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:24] SPIKE DETECTED: CPU at 11.666667%. Targets found: 348 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:26] SPIKE DETECTED: CPU at 10.569106%. Targets found: 349 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:28] SPIKE DETECTED: CPU at 12.500000%. Targets found: 349 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:30] SPIKE DETECTED: CPU at 21.186441%. Targets found: 348 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:34] SPIKE DETECTED: CPU at 37.288136%. Targets found: 347 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:37] SPIKE DETECTED: CPU at 12.931034%. Targets found: 348 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:41] SPIKE DETECTED: CPU at 12.605042%. Targets found: 347 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:49] SPIKE DETECTED: CPU at 24.576271%. Targets found: 346 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:51] SPIKE DETECTED: CPU at 18.644068%. Targets found: 348 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:53] SPIKE DETECTED: CPU at 17.948718%. Targets found: 347 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:57:56] SPIKE DETECTED: CPU at 20.689655%. Targets found: 347 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:58:17] SPIKE DETECTED: CPU at 12.396694%. Targets found: 345 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:58:19] SPIKE DETECTED: CPU at 21.487603%. Targets found: 350 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:58:31] SPIKE DETECTED: CPU at 32.500000%. Targets found: 348 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:58:40] SPIKE DETECTED: CPU at 36.666667%. Targets found: 349 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:59:09] SPIKE DETECTED: CPU at 64.406780%. Targets found: 347 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:59:11] SPIKE DETECTED: CPU at 11.666667%. Targets found: 348 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:59:13] SPIKE DETECTED: CPU at 27.731092%. Targets found: 349 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:59:17] SPIKE DETECTED: CPU at 35.294118%. Targets found: 349 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:59:24] SPIKE DETECTED: CPU at 40.336134%. Targets found: 348 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:59:45] SPIKE DETECTED: CPU at 13.445378%. Targets found: 354 (kthreadd pool_workqueue_release kworker/R-rcu_gp )
+[2026-03-30 23:59:54] Aegis Governor Initialized. Threshold: 80.000000%
+[2026-03-31 00:00:17] ACTION: Suspended stress (PID: 12711)
+[2026-03-31 00:00:17] SPIKE DETECTED: CPU at 100.000000%. Targets found: 352 (kthreadd pool_workqueue_release kworker/R-rcu_gp )

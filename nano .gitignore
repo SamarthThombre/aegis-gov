@@ -1,0 +1,31 @@
+# --- Compiled Binaries ---
+# We don't share the "runnable" files because others will compile their own
+aegis_run
+stress
+*.o
+*.out
+
+# --- Build Directory ---
+# This contains all the CMake temporary junk
+build/
+bin/
+obj/
+
+# --- CMake Generated Files ---
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+
+# --- Logs & Local Data ---
+# We ignore the audit log so your personal test history stay private
+*.log
+aegis_audit.log
+
+# --- System & Editor Files ---
+.DS_Store
+.vscode/
+.idea/
+*.swp

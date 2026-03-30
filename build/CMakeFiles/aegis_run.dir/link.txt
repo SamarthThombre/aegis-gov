@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/aegis_run.dir/src/main.cpp.o CMakeFiles/aegis_run.dir/src/discovery/ProcScanner.cpp.o CMakeFiles/aegis_run.dir/src/discovery/HealthMonitor.cpp.o CMakeFiles/aegis_run.dir/src/control/Governor.cpp.o CMakeFiles/aegis_run.dir/src/control/DecisionEngine.cpp.o CMakeFiles/aegis_run.dir/src/logging/Logger.cpp.o -o aegis_run 

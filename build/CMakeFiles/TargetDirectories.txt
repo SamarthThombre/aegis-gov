@@ -1,0 +1,4 @@
+/home/sam/Desktop/collage/aegis-gov/build/CMakeFiles/aegis_run.dir
+/home/sam/Desktop/collage/aegis-gov/build/CMakeFiles/stress.dir
+/home/sam/Desktop/collage/aegis-gov/build/CMakeFiles/edit_cache.dir
+/home/sam/Desktop/collage/aegis-gov/build/CMakeFiles/rebuild_cache.dir
