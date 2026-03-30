@@ -31,21 +31,22 @@ mkdir build
 cd build
 cmake ..
 make
-
+```
 
 Usage
 
-    Launch the Governor:
-    Bash
+Launch the Governor:
+    ```bash
 
     ./aegis_run
-
-    Trigger a System Spike (Stress Test):
+    ```
+Trigger a System Spike (Stress Test):
     In a separate terminal, run the included multi-threaded stress tool to watch Aegis detect and neutralize the threat:
-    Bash
+    ```Bash
 
     ./stress
-
+    ```
+    
 ###📊 Project Significance
 
 This project demonstrates advanced proficiency in Systems Programming, Concurrency (Multi-threading), and Resource Governance. It serves as a technical proof-of-concept for automated risk mitigation in server-side environments.
