@@ -39,13 +39,13 @@ Launch the Governor:
     ```bash
 
     ./aegis_run
-    ```
+    
 Trigger a System Spike (Stress Test):
     In a separate terminal, run the included multi-threaded stress tool to watch Aegis detect and neutralize the threat:
     ```Bash
 
     ./stress
-    ```
+    
     
 ###📊 Project Significance
 
