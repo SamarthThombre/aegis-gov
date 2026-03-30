@@ -50,22 +50,3 @@ Trigger a System Spike (Stress Test):
 ###📊 Project Significance
 
 This project demonstrates advanced proficiency in Systems Programming, Concurrency (Multi-threading), and Resource Governance. It serves as a technical proof-of-concept for automated risk mitigation in server-side environments.
-
-
----
-
-### Final Steps to Save the Project
-Now that your README and `.gitignore` are set, let's lock this in:
-
-1.  **Add the README to Git:**
-    ```bash
-    git add README.md
-    git commit -m "Docs: Added professional README with technical specifications"
-    ```
-2.  **Verify your clean state:**
-    ```bash
-    git status
-    ```
-    *(It should say "nothing to commit, working tree clean".)*
-
-**Would you like me to show you how to create a GitHub account and "push" this code so
