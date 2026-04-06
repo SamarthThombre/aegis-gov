@@ -153,6 +153,34 @@ CMakeFiles/aegis_run.dir/src/logging/Logger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aegis_run.dir/src/logging/Logger.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sam/Desktop/collage/aegis-gov/src/logging/Logger.cpp -o CMakeFiles/aegis_run.dir/src/logging/Logger.cpp.s
 
+CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.o: CMakeFiles/aegis_run.dir/flags.make
+CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.o: /home/sam/Desktop/collage/aegis-gov/src/core/SystemState.cpp
+CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.o: CMakeFiles/aegis_run.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sam/Desktop/collage/aegis-gov/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.o -MF CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.o.d -o CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.o -c /home/sam/Desktop/collage/aegis-gov/src/core/SystemState.cpp
+
+CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sam/Desktop/collage/aegis-gov/src/core/SystemState.cpp > CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.i
+
+CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sam/Desktop/collage/aegis-gov/src/core/SystemState.cpp -o CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.s
+
+CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.o: CMakeFiles/aegis_run.dir/flags.make
+CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.o: /home/sam/Desktop/collage/aegis-gov/src/core/WebServer.cpp
+CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.o: CMakeFiles/aegis_run.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sam/Desktop/collage/aegis-gov/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.o -MF CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.o.d -o CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.o -c /home/sam/Desktop/collage/aegis-gov/src/core/WebServer.cpp
+
+CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sam/Desktop/collage/aegis-gov/src/core/WebServer.cpp > CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.i
+
+CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sam/Desktop/collage/aegis-gov/src/core/WebServer.cpp -o CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.s
+
 # Object files for target aegis_run
 aegis_run_OBJECTS = \
 "CMakeFiles/aegis_run.dir/src/main.cpp.o" \
@@ -160,7 +188,9 @@ aegis_run_OBJECTS = \
 "CMakeFiles/aegis_run.dir/src/discovery/HealthMonitor.cpp.o" \
 "CMakeFiles/aegis_run.dir/src/control/Governor.cpp.o" \
 "CMakeFiles/aegis_run.dir/src/control/DecisionEngine.cpp.o" \
-"CMakeFiles/aegis_run.dir/src/logging/Logger.cpp.o"
+"CMakeFiles/aegis_run.dir/src/logging/Logger.cpp.o" \
+"CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.o" \
+"CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.o"
 
 # External object files for target aegis_run
 aegis_run_EXTERNAL_OBJECTS =
@@ -171,9 +201,11 @@ aegis_run: CMakeFiles/aegis_run.dir/src/discovery/HealthMonitor.cpp.o
 aegis_run: CMakeFiles/aegis_run.dir/src/control/Governor.cpp.o
 aegis_run: CMakeFiles/aegis_run.dir/src/control/DecisionEngine.cpp.o
 aegis_run: CMakeFiles/aegis_run.dir/src/logging/Logger.cpp.o
+aegis_run: CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.o
+aegis_run: CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.o
 aegis_run: CMakeFiles/aegis_run.dir/build.make
 aegis_run: CMakeFiles/aegis_run.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sam/Desktop/collage/aegis-gov/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable aegis_run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sam/Desktop/collage/aegis-gov/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable aegis_run"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/aegis_run.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

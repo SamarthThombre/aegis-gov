@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sam/Desktop/collage/aegis-gov/src/control/DecisionEngine.cpp" "CMakeFiles/aegis_run.dir/src/control/DecisionEngine.cpp.o" "gcc" "CMakeFiles/aegis_run.dir/src/control/DecisionEngine.cpp.o.d"
   "/home/sam/Desktop/collage/aegis-gov/src/control/Governor.cpp" "CMakeFiles/aegis_run.dir/src/control/Governor.cpp.o" "gcc" "CMakeFiles/aegis_run.dir/src/control/Governor.cpp.o.d"
+  "/home/sam/Desktop/collage/aegis-gov/src/core/SystemState.cpp" "CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.o" "gcc" "CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.o.d"
+  "/home/sam/Desktop/collage/aegis-gov/src/core/WebServer.cpp" "CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.o" "gcc" "CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.o.d"
   "/home/sam/Desktop/collage/aegis-gov/src/discovery/HealthMonitor.cpp" "CMakeFiles/aegis_run.dir/src/discovery/HealthMonitor.cpp.o" "gcc" "CMakeFiles/aegis_run.dir/src/discovery/HealthMonitor.cpp.o.d"
   "/home/sam/Desktop/collage/aegis-gov/src/discovery/ProcScanner.cpp" "CMakeFiles/aegis_run.dir/src/discovery/ProcScanner.cpp.o" "gcc" "CMakeFiles/aegis_run.dir/src/discovery/ProcScanner.cpp.o.d"
   "/home/sam/Desktop/collage/aegis-gov/src/logging/Logger.cpp" "CMakeFiles/aegis_run.dir/src/logging/Logger.cpp.o" "gcc" "CMakeFiles/aegis_run.dir/src/logging/Logger.cpp.o.d"

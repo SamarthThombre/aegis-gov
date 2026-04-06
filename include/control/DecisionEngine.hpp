@@ -3,7 +3,9 @@
 #include "discovery/HealthMonitor.hpp"
 #include "control/Governor.hpp"
 #include "logging/Logger.hpp"
+#include "core/SystemState.hpp"
 #include <atomic>
+#include <memory>
 
 namespace aegis {
 namespace control {
@@ -15,16 +17,16 @@ private:
     Governor governor;
     logging::Logger logger;
     
-    // std::atomic ensures it's safe to change this variable across different threads
-    std::atomic<double> cpuThreshold;
+    // Pointer to our shared vault
+    std::shared_ptr<core::SystemState> state;
+    
     std::atomic<bool> running;
 
-    // The background function that listens for your keyboard input
-    void inputListener(); 
-
 public:
-    DecisionEngine(double threshold = 80.0);
+    // The engine now takes a pointer to the shared state
+    DecisionEngine(std::shared_ptr<core::SystemState> sharedState);
     void run();
+    void stop();
 };
 
 }

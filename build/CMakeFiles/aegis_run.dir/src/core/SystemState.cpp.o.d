@@ -1,8 +1,7 @@
-CMakeFiles/aegis_run.dir/src/control/DecisionEngine.cpp.o: \
- /home/sam/Desktop/collage/aegis-gov/src/control/DecisionEngine.cpp \
+CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.o: \
+ /home/sam/Desktop/collage/aegis-gov/src/core/SystemState.cpp \
  /usr/include/stdc-predef.h \
- /home/sam/Desktop/collage/aegis-gov/include/control/DecisionEngine.hpp \
- /home/sam/Desktop/collage/aegis-gov/include/discovery/ProcScanner.hpp \
+ /home/sam/Desktop/collage/aegis-gov/include/core/SystemState.hpp \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -119,13 +118,8 @@ CMakeFiles/aegis_run.dir/src/control/DecisionEngine.cpp.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/13/bits/charconv.h \
- /usr/include/c++/13/bits/basic_string.tcc \
- /home/sam/Desktop/collage/aegis-gov/include/discovery/HealthMonitor.hpp \
- /home/sam/Desktop/collage/aegis-gov/include/control/Governor.hpp \
- /home/sam/Desktop/collage/aegis-gov/include/logging/Logger.hpp \
- /home/sam/Desktop/collage/aegis-gov/include/core/SystemState.hpp \
- /usr/include/c++/13/mutex /usr/include/c++/13/exception \
- /usr/include/c++/13/bits/exception_ptr.h \
+ /usr/include/c++/13/bits/basic_string.tcc /usr/include/c++/13/mutex \
+ /usr/include/c++/13/exception /usr/include/c++/13/bits/exception_ptr.h \
  /usr/include/c++/13/bits/cxxabi_init_exception.h \
  /usr/include/c++/13/typeinfo /usr/include/c++/13/bits/nested_exception.h \
  /usr/include/c++/13/bits/chrono.h /usr/include/c++/13/ratio \
@@ -154,19 +148,4 @@ CMakeFiles/aegis_run.dir/src/control/DecisionEngine.cpp.o: \
  /usr/include/c++/13/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
- /usr/include/c++/13/atomic /usr/include/c++/13/bits/atomic_base.h \
- /usr/include/c++/13/bits/atomic_lockfree_defines.h \
- /usr/include/c++/13/memory /usr/include/c++/13/bits/stl_tempbuf.h \
- /usr/include/c++/13/bits/stl_raw_storage_iter.h \
- /usr/include/c++/13/bits/align.h /usr/include/c++/13/bits/unique_ptr.h \
- /usr/include/c++/13/bits/shared_ptr.h \
- /usr/include/c++/13/bits/shared_ptr_base.h \
- /usr/include/c++/13/bits/allocated_ptr.h \
- /usr/include/c++/13/ext/aligned_buffer.h \
- /usr/include/c++/13/ext/concurrence.h \
- /usr/include/c++/13/bits/shared_ptr_atomic.h \
- /usr/include/c++/13/backward/auto_ptr.h \
- /usr/include/c++/13/pstl/glue_memory_defs.h \
- /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/thread \
- /usr/include/c++/13/bits/std_thread.h \
- /usr/include/c++/13/bits/this_thread_sleep.h /usr/include/c++/13/chrono
+ /home/sam/Desktop/collage/aegis-gov/include/discovery/ProcScanner.hpp

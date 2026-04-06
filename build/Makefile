@@ -190,6 +190,54 @@ src/control/Governor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aegis_run.dir/build.make CMakeFiles/aegis_run.dir/src/control/Governor.cpp.s
 .PHONY : src/control/Governor.cpp.s
 
+src/core/SystemState.o: src/core/SystemState.cpp.o
+.PHONY : src/core/SystemState.o
+
+# target to build an object file
+src/core/SystemState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aegis_run.dir/build.make CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.o
+.PHONY : src/core/SystemState.cpp.o
+
+src/core/SystemState.i: src/core/SystemState.cpp.i
+.PHONY : src/core/SystemState.i
+
+# target to preprocess a source file
+src/core/SystemState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aegis_run.dir/build.make CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.i
+.PHONY : src/core/SystemState.cpp.i
+
+src/core/SystemState.s: src/core/SystemState.cpp.s
+.PHONY : src/core/SystemState.s
+
+# target to generate assembly for a file
+src/core/SystemState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aegis_run.dir/build.make CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.s
+.PHONY : src/core/SystemState.cpp.s
+
+src/core/WebServer.o: src/core/WebServer.cpp.o
+.PHONY : src/core/WebServer.o
+
+# target to build an object file
+src/core/WebServer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aegis_run.dir/build.make CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.o
+.PHONY : src/core/WebServer.cpp.o
+
+src/core/WebServer.i: src/core/WebServer.cpp.i
+.PHONY : src/core/WebServer.i
+
+# target to preprocess a source file
+src/core/WebServer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aegis_run.dir/build.make CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.i
+.PHONY : src/core/WebServer.cpp.i
+
+src/core/WebServer.s: src/core/WebServer.cpp.s
+.PHONY : src/core/WebServer.s
+
+# target to generate assembly for a file
+src/core/WebServer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aegis_run.dir/build.make CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.s
+.PHONY : src/core/WebServer.cpp.s
+
 src/discovery/HealthMonitor.o: src/discovery/HealthMonitor.cpp.o
 .PHONY : src/discovery/HealthMonitor.o
 
@@ -326,6 +374,12 @@ help:
 	@echo "... src/control/Governor.o"
 	@echo "... src/control/Governor.i"
 	@echo "... src/control/Governor.s"
+	@echo "... src/core/SystemState.o"
+	@echo "... src/core/SystemState.i"
+	@echo "... src/core/SystemState.s"
+	@echo "... src/core/WebServer.o"
+	@echo "... src/core/WebServer.i"
+	@echo "... src/core/WebServer.s"
 	@echo "... src/discovery/HealthMonitor.o"
 	@echo "... src/discovery/HealthMonitor.i"
 	@echo "... src/discovery/HealthMonitor.s"
