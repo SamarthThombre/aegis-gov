@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/aegis_run.dir/src/control/CGroupManager.cpp.o"
+  "CMakeFiles/aegis_run.dir/src/control/CGroupManager.cpp.o.d"
   "CMakeFiles/aegis_run.dir/src/control/DecisionEngine.cpp.o"
   "CMakeFiles/aegis_run.dir/src/control/DecisionEngine.cpp.o.d"
   "CMakeFiles/aegis_run.dir/src/control/Governor.cpp.o"

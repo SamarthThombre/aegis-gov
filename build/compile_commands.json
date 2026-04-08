@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/home/sam/Desktop/collage/aegis-gov/build",
+  "command": "/usr/bin/g++  -I/home/sam/Desktop/collage/aegis-gov/include -g -std=gnu++17 -o CMakeFiles/aegis_run.dir/src/main.cpp.o -c /home/sam/Desktop/collage/aegis-gov/src/main.cpp",
+  "file": "/home/sam/Desktop/collage/aegis-gov/src/main.cpp",
+  "output": "CMakeFiles/aegis_run.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/sam/Desktop/collage/aegis-gov/build",
+  "command": "/usr/bin/g++  -I/home/sam/Desktop/collage/aegis-gov/include -g -std=gnu++17 -o CMakeFiles/aegis_run.dir/src/discovery/ProcScanner.cpp.o -c /home/sam/Desktop/collage/aegis-gov/src/discovery/ProcScanner.cpp",
+  "file": "/home/sam/Desktop/collage/aegis-gov/src/discovery/ProcScanner.cpp",
+  "output": "CMakeFiles/aegis_run.dir/src/discovery/ProcScanner.cpp.o"
+},
+{
+  "directory": "/home/sam/Desktop/collage/aegis-gov/build",
+  "command": "/usr/bin/g++  -I/home/sam/Desktop/collage/aegis-gov/include -g -std=gnu++17 -o CMakeFiles/aegis_run.dir/src/discovery/HealthMonitor.cpp.o -c /home/sam/Desktop/collage/aegis-gov/src/discovery/HealthMonitor.cpp",
+  "file": "/home/sam/Desktop/collage/aegis-gov/src/discovery/HealthMonitor.cpp",
+  "output": "CMakeFiles/aegis_run.dir/src/discovery/HealthMonitor.cpp.o"
+},
+{
+  "directory": "/home/sam/Desktop/collage/aegis-gov/build",
+  "command": "/usr/bin/g++  -I/home/sam/Desktop/collage/aegis-gov/include -g -std=gnu++17 -o CMakeFiles/aegis_run.dir/src/control/Governor.cpp.o -c /home/sam/Desktop/collage/aegis-gov/src/control/Governor.cpp",
+  "file": "/home/sam/Desktop/collage/aegis-gov/src/control/Governor.cpp",
+  "output": "CMakeFiles/aegis_run.dir/src/control/Governor.cpp.o"
+},
+{
+  "directory": "/home/sam/Desktop/collage/aegis-gov/build",
+  "command": "/usr/bin/g++  -I/home/sam/Desktop/collage/aegis-gov/include -g -std=gnu++17 -o CMakeFiles/aegis_run.dir/src/control/DecisionEngine.cpp.o -c /home/sam/Desktop/collage/aegis-gov/src/control/DecisionEngine.cpp",
+  "file": "/home/sam/Desktop/collage/aegis-gov/src/control/DecisionEngine.cpp",
+  "output": "CMakeFiles/aegis_run.dir/src/control/DecisionEngine.cpp.o"
+},
+{
+  "directory": "/home/sam/Desktop/collage/aegis-gov/build",
+  "command": "/usr/bin/g++  -I/home/sam/Desktop/collage/aegis-gov/include -g -std=gnu++17 -o CMakeFiles/aegis_run.dir/src/control/CGroupManager.cpp.o -c /home/sam/Desktop/collage/aegis-gov/src/control/CGroupManager.cpp",
+  "file": "/home/sam/Desktop/collage/aegis-gov/src/control/CGroupManager.cpp",
+  "output": "CMakeFiles/aegis_run.dir/src/control/CGroupManager.cpp.o"
+},
+{
+  "directory": "/home/sam/Desktop/collage/aegis-gov/build",
+  "command": "/usr/bin/g++  -I/home/sam/Desktop/collage/aegis-gov/include -g -std=gnu++17 -o CMakeFiles/aegis_run.dir/src/logging/Logger.cpp.o -c /home/sam/Desktop/collage/aegis-gov/src/logging/Logger.cpp",
+  "file": "/home/sam/Desktop/collage/aegis-gov/src/logging/Logger.cpp",
+  "output": "CMakeFiles/aegis_run.dir/src/logging/Logger.cpp.o"
+},
+{
+  "directory": "/home/sam/Desktop/collage/aegis-gov/build",
+  "command": "/usr/bin/g++  -I/home/sam/Desktop/collage/aegis-gov/include -g -std=gnu++17 -o CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.o -c /home/sam/Desktop/collage/aegis-gov/src/core/SystemState.cpp",
+  "file": "/home/sam/Desktop/collage/aegis-gov/src/core/SystemState.cpp",
+  "output": "CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.o"
+},
+{
+  "directory": "/home/sam/Desktop/collage/aegis-gov/build",
+  "command": "/usr/bin/g++  -I/home/sam/Desktop/collage/aegis-gov/include -g -std=gnu++17 -o CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.o -c /home/sam/Desktop/collage/aegis-gov/src/core/WebServer.cpp",
+  "file": "/home/sam/Desktop/collage/aegis-gov/src/core/WebServer.cpp",
+  "output": "CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.o"
+},
+{
+  "directory": "/home/sam/Desktop/collage/aegis-gov/build",
+  "command": "/usr/bin/g++  -I/home/sam/Desktop/collage/aegis-gov/include -g -std=gnu++17 -o CMakeFiles/stress.dir/src/stress.cpp.o -c /home/sam/Desktop/collage/aegis-gov/src/stress.cpp",
+  "file": "/home/sam/Desktop/collage/aegis-gov/src/stress.cpp",
+  "output": "CMakeFiles/stress.dir/src/stress.cpp.o"
+}
+]

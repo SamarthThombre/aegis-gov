@@ -10,8 +10,8 @@ int main()
     auto sharedState = std::make_shared<aegis::core::SystemState>(80.0);
 
     // 1. Start the Core Engine (Background Thread)
-    aegis::control::DecisionEngine engine(sharedState);
-    std::thread engineThread(&aegis::control::DecisionEngine::run, &engine);
+    auto engine = std::make_shared<aegis::control::DecisionEngine>(sharedState);
+    std::thread engineThread(&aegis::control::DecisionEngine::run, engine);
     engineThread.detach();
 
     // 2. Start the Web Server (Main Thread)
@@ -19,7 +19,7 @@ int main()
     std::cout << "[Web] API available at http://localhost:8080/api/status\n";
 
     // ... inside main ...
-    aegis::core::WebServer webServer(sharedState, 8080);
+    aegis::core::WebServer webServer(sharedState, engine, 8080);
 
     // Start a simple logger thread to see if the engine is actually updating the vault
     std::thread diagnosticThread([sharedState]()

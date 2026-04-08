@@ -14,6 +14,7 @@ add_executable(aegis_run
     src/discovery/HealthMonitor.cpp 
     src/control/Governor.cpp 
     src/control/DecisionEngine.cpp 
+    src/control/CGroupManager.cpp 
     src/logging/Logger.cpp 
     src/core/SystemState.cpp 
     src/core/WebServer.cpp

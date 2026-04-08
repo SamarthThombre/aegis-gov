@@ -341,4 +341,12 @@ CMakeFiles/aegis_run.dir/src/core/WebServer.cpp.o: \
  /usr/include/c++/13/bits/unordered_set.h /usr/include/c++/13/utility \
  /usr/include/c++/13/bits/stl_relops.h \
  /home/sam/Desktop/collage/aegis-gov/include/core/SystemState.hpp \
- /home/sam/Desktop/collage/aegis-gov/include/discovery/ProcScanner.hpp
+ /home/sam/Desktop/collage/aegis-gov/include/discovery/ProcScanner.hpp \
+ /home/sam/Desktop/collage/aegis-gov/include/control/DecisionEngine.hpp \
+ /home/sam/Desktop/collage/aegis-gov/include/discovery/HealthMonitor.hpp \
+ /home/sam/Desktop/collage/aegis-gov/include/control/Governor.hpp \
+ /home/sam/Desktop/collage/aegis-gov/include/control/CGroupManager.hpp \
+ /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
+ /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/codecvt \
+ /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
+ /home/sam/Desktop/collage/aegis-gov/include/logging/Logger.hpp

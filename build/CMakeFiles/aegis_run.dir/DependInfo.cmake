@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/sam/Desktop/collage/aegis-gov/src/control/CGroupManager.cpp" "CMakeFiles/aegis_run.dir/src/control/CGroupManager.cpp.o" "gcc" "CMakeFiles/aegis_run.dir/src/control/CGroupManager.cpp.o.d"
   "/home/sam/Desktop/collage/aegis-gov/src/control/DecisionEngine.cpp" "CMakeFiles/aegis_run.dir/src/control/DecisionEngine.cpp.o" "gcc" "CMakeFiles/aegis_run.dir/src/control/DecisionEngine.cpp.o.d"
   "/home/sam/Desktop/collage/aegis-gov/src/control/Governor.cpp" "CMakeFiles/aegis_run.dir/src/control/Governor.cpp.o" "gcc" "CMakeFiles/aegis_run.dir/src/control/Governor.cpp.o.d"
   "/home/sam/Desktop/collage/aegis-gov/src/core/SystemState.cpp" "CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.o" "gcc" "CMakeFiles/aegis_run.dir/src/core/SystemState.cpp.o.d"

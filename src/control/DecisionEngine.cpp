@@ -50,5 +50,34 @@ void DecisionEngine::stop() {
     running = false;
 }
 
+bool DecisionEngine::pauseProcess(int pid) {
+    return governor.pauseProcess(pid);
+}
+
+bool DecisionEngine::executeCommand(const core::ActionCommand& command) {
+    switch (command.type) {
+        case core::ActionType::PAUSE:
+            if (governor.pauseProcess(command.targetPid)) {
+                state->addLog("ACTION: Paused process PID " + std::to_string(command.targetPid));
+                logger.logEvent("Paused PID " + std::to_string(command.targetPid));
+                return true;
+            } else {
+                state->addLog("ERROR: Failed to pause process PID " + std::to_string(command.targetPid));
+                return false;
+            }
+        case core::ActionType::CAP:
+            if (cgroupManager.capProcess(command.targetPid, command.limitPercentage)) {
+                state->addLog("ACTION: Capped process PID " + std::to_string(command.targetPid) + " at " + std::to_string(command.limitPercentage) + "%");
+                logger.logEvent("Capped PID " + std::to_string(command.targetPid) + " at " + std::to_string(command.limitPercentage) + "%");
+                return true;
+            } else {
+                state->addLog("ERROR: Failed to cap process PID " + std::to_string(command.targetPid));
+                return false;
+            }
+        default:
+            return false;
+    }
+}
+
 }
 }

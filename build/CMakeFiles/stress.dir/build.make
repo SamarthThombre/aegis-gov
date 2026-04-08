@@ -73,15 +73,15 @@ CMakeFiles/stress.dir/src/stress.cpp.o: CMakeFiles/stress.dir/flags.make
 CMakeFiles/stress.dir/src/stress.cpp.o: /home/sam/Desktop/collage/aegis-gov/src/stress.cpp
 CMakeFiles/stress.dir/src/stress.cpp.o: CMakeFiles/stress.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sam/Desktop/collage/aegis-gov/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/stress.dir/src/stress.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/stress.dir/src/stress.cpp.o -MF CMakeFiles/stress.dir/src/stress.cpp.o.d -o CMakeFiles/stress.dir/src/stress.cpp.o -c /home/sam/Desktop/collage/aegis-gov/src/stress.cpp
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/stress.dir/src/stress.cpp.o -MF CMakeFiles/stress.dir/src/stress.cpp.o.d -o CMakeFiles/stress.dir/src/stress.cpp.o -c /home/sam/Desktop/collage/aegis-gov/src/stress.cpp
 
 CMakeFiles/stress.dir/src/stress.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/stress.dir/src/stress.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sam/Desktop/collage/aegis-gov/src/stress.cpp > CMakeFiles/stress.dir/src/stress.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sam/Desktop/collage/aegis-gov/src/stress.cpp > CMakeFiles/stress.dir/src/stress.cpp.i
 
 CMakeFiles/stress.dir/src/stress.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/stress.dir/src/stress.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sam/Desktop/collage/aegis-gov/src/stress.cpp -o CMakeFiles/stress.dir/src/stress.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sam/Desktop/collage/aegis-gov/src/stress.cpp -o CMakeFiles/stress.dir/src/stress.cpp.s
 
 # Object files for target stress
 stress_OBJECTS = \

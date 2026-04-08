@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aegis Execution Gateway</title>
+    <style>
+        :root {
+            --bg-base: #101820;
+            --bg-panel: #19232f;
+            --bg-card: #ffffff;
+            --bg-card-soft: #f3f6fb;
+            --text-main: #eff2f7;
+            --text-dark: #111827;
+            --text-muted: #94a3b8;
+            --accent: #0f4c81;
+            --accent-strong: #1f6feb;
+            --border: #2c3e50;
+            --danger: #db3a34;
+            --success: #16a34a;
+            --warning: #f59e0b;
+            --surface: #1f2a38;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Inter, 'Segoe UI', Arial, sans-serif;
+            background: radial-gradient(circle at top left, rgba(31, 111, 235, 0.12), transparent 24%),
+                        linear-gradient(180deg, #101820 0%, #101820 100%);
+            color: var(--text-main);
+        }
+
+        header.gateway-header {
+            background: linear-gradient(90deg, #0b1f3f 0%, #132a4b 100%);
+            padding: 20px 32px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-block {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .logo-mark {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background: #1f6feb;
+            display: grid;
+            place-items: center;
+            box-shadow: 0 0 18px rgba(31, 111, 235, 0.35);
+        }
+        .logo-mark span {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #fff;
+        }
+        .logo-title {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .logo-title h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            letter-spacing: 0.02em;
+        }
+        .logo-title p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.92rem;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .header-chip {
+            background: rgba(255,255,255,0.08);
+            color: var(--text-main);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 10px 16px;
+            border-radius: 14px;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        nav.gateway-nav {
+            display: flex;
+            gap: 12px;
+            padding: 18px 32px;
+            background: #111b28;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .tab-button {
+            background: transparent;
+            border: 1px solid transparent;
+            padding: 12px 18px;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .tab-button:hover {
+            background: rgba(255,255,255,0.06);
+        }
+        .tab-button.active {
+            background: var(--bg-card-soft);
+            color: var(--text-dark);
+            border-color: rgba(31,111,235,0.35);
+            box-shadow: 0 8px 20px rgba(15, 76, 129, 0.15);
+        }
+
+        .page-content {
+            padding: 32px;
+            max-width: 1320px;
+            margin: 0 auto;
+        }
+        .section-card {
+            background: var(--bg-card);
+            color: var(--text-dark);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 26px;
+            margin-bottom: 24px;
+            box-shadow: 0 20px 55px rgba(16, 33, 66, 0.12);
+        }
+        .section-title {
+            margin: 0 0 18px;
+            font-size: 1.2rem;
+            letter-spacing: 0.01em;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-bottom: 24px;
+        }
+        .metric-card {
+            background: #f8fbff;
+            border-radius: 14px;
+            border: 1px solid #dfe7f2;
+            padding: 22px 24px;
+            min-height: 124px;
+        }
+        .metric-label {
+            font-size: 0.82rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 12px;
+        }
+        .metric-large {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0f172a;
+            line-height: 1;
+        }
+        .metric-small {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-top: 8px;
+        }
+        .info-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 14px;
+            color: #0f172a;
+        }
+        .info-pill {
+            background: rgba(15, 76, 129, 0.08);
+            color: #0f4c81;
+            border-radius: 999px;
+            padding: 4px 10px;
+            font-size: 0.85rem;
+        }
+
+        .table-panel {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 760px;
+        }
+        th, td {
+            padding: 18px 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            text-align: left;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #334155;
+            background: #eef4ff;
+        }
+        td {
+            color: #0f172a;
+            font-size: 0.95rem;
+            background: #fff;
+        }
+        tr:hover td {
+            background: #f8fbff;
+        }
+        tr:last-child td { border-bottom: none; }
+        .pid-cell { font-family: 'Courier New', monospace; color: #475569; }
+        .action-button {
+            padding: 10px 16px;
+            border: 1px solid #ef4444;
+            background: #fff5f5;
+            color: #b91c1c;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .action-button:hover {
+            background: #fee2e2;
+            transform: translateY(-1px);
+        }
+
+        .cap-button {
+            padding: 10px 16px;
+            border: 1px solid #6366f1;
+            background: #eef2ff;
+            color: #4338ca;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-left: 8px;
+        }
+        .cap-button:hover {
+            background: #e0e7ff;
+            transform: translateY(-1px);
+        }
+
+        .form-grid {
+            display: grid;
+            gap: 18px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 18px;
+            align-items: end;
+        }
+        .field-label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #102a43;
+            margin-bottom: 8px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 14px;
+            border: 1px solid #cbd5e1;
+            background: #f8fafc;
+            color: #0f172a;
+            font-size: 1rem;
+        }
+        .save-button {
+            background: #0f4c81;
+            color: #fff;
+            border: none;
+            border-radius: 14px;
+            padding: 14px 22px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        .save-button:hover { background: #1f6feb; }
+
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+        .gateway-footer {
+            padding: 24px 32px;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="gateway-header">
+        <div class="logo-block">
+            <div class="logo-mark"><span>AG</span></div>
+            <div class="logo-title">
+                <h1>Aegis Execution Gateway</h1>
+                <p>Enterprise router-style process governance console</p>
+            </div>
+        </div>
+        <div class="header-actions">
+            <div class="header-chip">Backend: localhost:8080</div>
+            <div class="header-chip">Mode: Live Monitoring</div>
+        </div>
+    </header>
+
+    <nav class="gateway-nav">
+        <button class="tab-button active" data-tab="status">System Status</button>
+        <button class="tab-button" data-tab="rules">Process Rules</button>
+        <button class="tab-button" data-tab="diagnostics">Diagnostics</button>
+    </nav>
+
+    <main class="page-content">
+        <section id="status" class="tab-panel active">
+            <div class="section-card">
+                <h2 class="section-title">Live Gateway Telemetry</h2>
+                <div class="grid-3">
+                    <div class="metric-card">
+                        <div class="metric-label">System CPU Load</div>
+                        <div class="metric-large" id="cpu-load">0.00%</div>
+                        <div class="metric-small">Updated every 2 seconds</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Active Threshold</div>
+                        <div class="metric-large" id="active-threshold">80.0%</div>
+                        <div class="metric-small">Critical governance threshold</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Active Processes</div>
+                        <div class="metric-large" id="proc-count">--</div>
+                        <div class="metric-small">Processes currently monitored</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card table-panel">
+                <h2 class="section-title">Active Process Table</h2>
+                <div class="table-panel">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>PID</th>
+                                <th>Process Name</th>
+                                <th>CPU %</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="process-tbody">
+                            <tr>
+                                <td colspan="5" style="text-align:center; color:#64748b; padding: 24px;">Waiting for telemetry...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="rules" class="tab-panel">
+            <div class="section-card">
+                <h2 class="section-title">Process Rules Configuration</h2>
+                <div class="form-grid">
+                    <div>
+                        <label class="field-label" for="threshold-input">Max CPU Threshold (%)</label>
+                        <input id="threshold-input" class="input-field" type="number" min="1" max="100" value="80" />
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label class="field-label">Save Permissions</label>
+                            <p style="color:#475569; font-size:0.94rem;">This is a simulated configuration panel. Backend persistence is not connected.</p>
+                        </div>
+                        <button class="save-button" onclick="saveConfig()">Save Configuration</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="diagnostics" class="tab-panel">
+            <div class="section-card">
+                <h2 class="section-title">Diagnostics</h2>
+                <p style="color:#475569; line-height:1.8;">This panel is a read-only diagnostic console designed to resemble gateway firmware diagnostics. Live logs, interface health, and sysctl status can be added here in future updates.</p>
+                <div style="margin-top:20px; background:#f8fbff; border:1px solid #cbd5e1; border-radius:16px; padding:20px; color:#0f172a; font-size:0.95rem;">
+                    <strong>Last backend poll:</strong> <span id="last-poll">N/A</span><br>
+                    <strong>API status:</strong> <span id="api-status">Pending</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="gateway-footer">Aegis Execution Gateway • Built for enterprise process governance and system telemetry.</footer>
+
+    <script>
+        const API_BASE = '/api';
+        const tabs = document.querySelectorAll('.tab-button');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.getElementById(tab.dataset.tab).classList.add('active');
+                tab.classList.add('active');
+            });
+        });
+
+        function fetchStatus() {
+            fetch(`${API_BASE}/status`)
+                .then(response => {
+                    if (!response.ok) throw new Error('Backend unavailable');
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById('api-status').textContent = 'OK';
+                    document.getElementById('last-poll').textContent = new Date().toLocaleTimeString();
+
+                    const cpuLoad = data.cpuLoad ?? data.cpu_load ?? 0;
+                    const activeThreshold = data.activeThreshold ?? data.threshold ?? 0;
+                    const processes = data.activeProcesses ?? data.processes ?? [];
+
+                    document.getElementById('cpu-load').textContent = `${Number(cpuLoad).toFixed(2)}%`;
+                    document.getElementById('active-threshold').textContent = `${Number(activeThreshold).toFixed(1)}%`;
+                    document.getElementById('proc-count').textContent = processes.length;
+
+                    updateProcessTable(processes);
+                })
+                .catch(() => {
+                    document.getElementById('api-status').textContent = 'Offline';
+                    document.getElementById('last-poll').textContent = new Date().toLocaleTimeString();
+                    showError('Unable to reach backend at /api/status.');
+                });
+        }
+
+        function updateProcessTable(processes) {
+            const tbody = document.getElementById('process-tbody');
+            tbody.innerHTML = '';
+
+            if (!processes.length) {
+                tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; color:#64748b; padding: 24px;">No active processes available.</td></tr>';
+                return;
+            }
+
+            // Sort by CPU usage descending
+            processes.sort((a, b) => (b.cpuUsage || 0) - (a.cpuUsage || 0));
+
+            processes.forEach(proc => {
+                const row = document.createElement('tr');
+                const cpuUsage = proc.cpuUsage || 0;
+                const cpuColor = cpuUsage > 10 ? (cpuUsage > 20 ? 'var(--danger)' : 'var(--warning)') : '#0f172a';
+                row.innerHTML = `
+                    <td class="pid-cell">${proc.pid}</td>
+                    <td>${proc.name}</td>
+                    <td style="color: ${cpuColor}; font-weight: 600;">${cpuUsage.toFixed(1)}%</td>
+                    <td><span style="color:${proc.paused ? '#f59e0b':'#16a34a'}; font-weight:700;">${proc.paused ? 'Paused' : 'Running'}</span></td>
+                    <td>
+                        <button class="action-button" onclick="sendAction(${proc.pid}, 'pause')">Pause</button>
+                        <button class="cap-button" onclick="sendAction(${proc.pid}, 'cap', 50)">Cap at 50%</button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function sendAction(pid, type, limit = 0) {
+            const payload = { pid, type };
+            if (type === 'cap') payload.limit = limit;
+            fetch(`${API_BASE}/action`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('Action failed');
+                return response.json();
+            })
+            .then(() => fetchStatus())
+            .catch(() => alert(`Failed to send ${type} command.`));
+        }
+
+        function saveConfig() {
+            const threshold = document.getElementById('threshold-input').value;
+            fetch(`${API_BASE}/config`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ threshold: parseFloat(threshold) })
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('Config failed');
+                return response.json();
+            })
+            .then(() => alert('Configuration saved successfully.'))
+            .catch(() => alert('Failed to save configuration.'));
+        }
+
+        function showError(message) {
+            let banner = document.getElementById('error-message');
+            if (!banner) {
+                banner = document.createElement('div');
+                banner.id = 'error-message';
+                banner.style = 'position:fixed; top:90px; left:50%; transform:translateX(-50%); z-index:50; width:calc(100% - 64px); max-width:900px; padding:16px 20px; background:#fee2e2; color:#991b1b; border:1px solid #fecaca; border-radius:12px; font-weight:600;';
+                document.body.appendChild(banner);
+            }
+            banner.textContent = message;
+            banner.style.display = 'block';
+        }
+
+        fetchStatus();
+        setInterval(fetchStatus, 2000);
+    </script>
+</body>
+</html>

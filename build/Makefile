@@ -142,6 +142,30 @@ stress/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stress.dir/build.make CMakeFiles/stress.dir/build
 .PHONY : stress/fast
 
+src/control/CGroupManager.o: src/control/CGroupManager.cpp.o
+.PHONY : src/control/CGroupManager.o
+
+# target to build an object file
+src/control/CGroupManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aegis_run.dir/build.make CMakeFiles/aegis_run.dir/src/control/CGroupManager.cpp.o
+.PHONY : src/control/CGroupManager.cpp.o
+
+src/control/CGroupManager.i: src/control/CGroupManager.cpp.i
+.PHONY : src/control/CGroupManager.i
+
+# target to preprocess a source file
+src/control/CGroupManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aegis_run.dir/build.make CMakeFiles/aegis_run.dir/src/control/CGroupManager.cpp.i
+.PHONY : src/control/CGroupManager.cpp.i
+
+src/control/CGroupManager.s: src/control/CGroupManager.cpp.s
+.PHONY : src/control/CGroupManager.s
+
+# target to generate assembly for a file
+src/control/CGroupManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aegis_run.dir/build.make CMakeFiles/aegis_run.dir/src/control/CGroupManager.cpp.s
+.PHONY : src/control/CGroupManager.cpp.s
+
 src/control/DecisionEngine.o: src/control/DecisionEngine.cpp.o
 .PHONY : src/control/DecisionEngine.o
 
@@ -368,6 +392,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... aegis_run"
 	@echo "... stress"
+	@echo "... src/control/CGroupManager.o"
+	@echo "... src/control/CGroupManager.i"
+	@echo "... src/control/CGroupManager.s"
 	@echo "... src/control/DecisionEngine.o"
 	@echo "... src/control/DecisionEngine.i"
 	@echo "... src/control/DecisionEngine.s"

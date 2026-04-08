@@ -9,6 +9,7 @@ namespace discovery {
 struct ProcessInfo {
     int pid;
     std::string name;
+    double cpuUsage = 0.0;
 };
 
 class ProcScanner {

@@ -7,6 +7,17 @@
 namespace aegis {
 namespace core {
 
+enum class ActionType {
+    PAUSE,
+    CAP
+};
+
+struct ActionCommand {
+    int targetPid;
+    ActionType type;
+    int limitPercentage = 0;
+};
+
 class SystemState {
 private:
     double currentCPULoad;
