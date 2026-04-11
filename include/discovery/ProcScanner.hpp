@@ -1,3 +1,9 @@
+/*
+ * Project: Aegis Governor V2.0
+ * Author: Samarth
+ * Description: Header defining the process scanning interface for discovering active system processes.
+ */
+
 #pragma once
 #include <vector>
 #include <string>
@@ -5,7 +11,6 @@
 namespace aegis {
 namespace discovery {
 
-// Create a custom struct to hold both pieces of data
 struct ProcessInfo {
     int pid;
     std::string name;
@@ -14,7 +19,6 @@ struct ProcessInfo {
 
 class ProcScanner {
 public:
-    // Now returns our custom struct instead of just integers
     std::vector<ProcessInfo> getActiveProcesses();
 };
 

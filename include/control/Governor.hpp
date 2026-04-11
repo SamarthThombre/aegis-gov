@@ -1,3 +1,9 @@
+/*
+ * Project: Aegis Governor V2.0
+ * Author: Samarth
+ * Description: Header defining the governor interface for process suspension and resumption.
+ */
+
 #pragma once
 
 namespace aegis {
@@ -5,10 +11,7 @@ namespace control {
 
 class Governor {
 public:
-    // Sends SIGSTOP to freeze a process
     bool pauseProcess(int pid);
-    
-    // Sends SIGCONT to unfreeze a process
     bool resumeProcess(int pid);
 };
 

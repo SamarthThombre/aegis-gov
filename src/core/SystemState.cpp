@@ -1,12 +1,17 @@
+/*
+ * Project: Aegis Governor V2.0
+ * Author: Samarth
+ * Description: Implementation of thread-safe system state management.
+ */
+
 #include "core/SystemState.hpp"
 
 namespace aegis {
 namespace core {
 
-SystemState::SystemState(double initialThreshold) 
+SystemState::SystemState(double initialThreshold)
     : currentCPULoad(0.0), currentThreshold(initialThreshold) {}
 
-// --- Writers ---
 void SystemState::updateCPULoad(double load) {
     std::lock_guard<std::mutex> lock(stateMutex);
     currentCPULoad = load;
@@ -25,13 +30,11 @@ void SystemState::updateProcesses(const std::vector<discovery::ProcessInfo>& pro
 void SystemState::addLog(const std::string& logMessage) {
     std::lock_guard<std::mutex> lock(stateMutex);
     recentLogs.push_back(logMessage);
-    // Keep only the last 10 logs in memory to prevent infinite growth
     if (recentLogs.size() > 10) {
         recentLogs.erase(recentLogs.begin());
     }
 }
 
-// --- Readers ---
 double SystemState::getCPULoad() const {
     std::lock_guard<std::mutex> lock(stateMutex);
     return currentCPULoad;

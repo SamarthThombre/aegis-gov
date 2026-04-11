@@ -1,3 +1,9 @@
+/*
+ * Project: Aegis Governor V2.0
+ * Author: Samarth
+ * Description: Implementation of REST API server and dashboard serving.
+ */
+
 #include "core/WebServer.hpp"
 #include <sstream>
 #include <iomanip>
@@ -5,11 +11,9 @@
 namespace aegis {
 namespace core {
 
-WebServer::WebServer(std::shared_ptr<SystemState> sharedState, std::shared_ptr<control::DecisionEngine> decisionEngine, int p) 
+WebServer::WebServer(std::shared_ptr<SystemState> sharedState, std::shared_ptr<control::DecisionEngine> decisionEngine, int p)
     : state(sharedState), engine(decisionEngine), port(p) {
-    
 
-    // The "Home Route" - Serves the Gateway Configuration UI from the project root
     svr.Get("/", [&](const httplib::Request& req, httplib::Response& res) {
         std::ifstream file("index.html");
         if (!file.is_open()) {
@@ -41,8 +45,7 @@ WebServer::WebServer(std::shared_ptr<SystemState> sharedState, std::shared_ptr<c
             res.set_content("Gateway UI Offline: index.html not found. Please run the server from the project root or place index.html next to the executable.", "text/plain");
         }
     });
-        
-    // Define the /api/status endpoint
+
     svr.Get("/api/status", [&](const httplib::Request&, httplib::Response& res) {
         auto processes = state->getProcesses();
         std::stringstream ss;
@@ -55,23 +58,17 @@ WebServer::WebServer(std::shared_ptr<SystemState> sharedState, std::shared_ptr<c
             if (i < processes.size() - 1) ss << ",";
         }
         ss << "]}";
-        
+
         res.set_content(ss.str(), "application/json");
-        // Allow the browser to access this from a different port (CORS)
         res.set_header("Access-Control-Allow-Origin", "*");
     });
 
-    
-
-    // Define the /api/action endpoint
     svr.Post("/api/action", [&](const httplib::Request& req, httplib::Response& res) {
-        // Parse JSON for {"pid": number, "type": "pause"|"cap", "limit": number}
         std::string body = req.body;
         core::ActionCommand command;
         command.targetPid = -1;
         command.limitPercentage = 0;
 
-        // Extract pid
         size_t pidPos = body.find("\"pid\":");
         if (pidPos != std::string::npos) {
             size_t start = pidPos + 6;
@@ -81,7 +78,6 @@ WebServer::WebServer(std::shared_ptr<SystemState> sharedState, std::shared_ptr<c
             command.targetPid = std::stoi(pidStr);
         }
 
-        // Extract type
         size_t typePos = body.find("\"type\":\"");
         if (typePos != std::string::npos) {
             size_t start = typePos + 8;
@@ -94,7 +90,6 @@ WebServer::WebServer(std::shared_ptr<SystemState> sharedState, std::shared_ptr<c
             }
         }
 
-        // Extract limit for cap
         size_t limitPos = body.find("\"limit\":");
         if (limitPos != std::string::npos) {
             size_t start = limitPos + 8;
@@ -116,9 +111,7 @@ WebServer::WebServer(std::shared_ptr<SystemState> sharedState, std::shared_ptr<c
         res.set_header("Access-Control-Allow-Origin", "*");
     });
 
-    // Define the /api/config endpoint
     svr.Post("/api/config", [&](const httplib::Request& req, httplib::Response& res) {
-        // Parse JSON for {"threshold": double}
         std::string body = req.body;
         size_t thresholdPos = body.find("\"threshold\":");
         if (thresholdPos != std::string::npos) {
@@ -135,7 +128,6 @@ WebServer::WebServer(std::shared_ptr<SystemState> sharedState, std::shared_ptr<c
         res.set_header("Access-Control-Allow-Origin", "*");
     });
 }
-
 
 void WebServer::start() {
     state->addLog("Web Server starting on port " + std::to_string(port));

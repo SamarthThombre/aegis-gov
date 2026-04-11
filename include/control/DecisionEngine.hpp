@@ -1,3 +1,9 @@
+/*
+ * Project: Aegis Governor V2.0
+ * Author: Samarth
+ * Description: Header defining the decision engine interface for process control and governance.
+ */
+
 #pragma once
 #include "discovery/ProcScanner.hpp"
 #include "discovery/HealthMonitor.hpp"
@@ -18,14 +24,10 @@ private:
     Governor governor;
     CGroupManager cgroupManager;
     logging::Logger logger;
-    
-    // Pointer to our shared vault
     std::shared_ptr<core::SystemState> state;
-    
     std::atomic<bool> running;
 
 public:
-    // The engine now takes a pointer to the shared state
     DecisionEngine(std::shared_ptr<core::SystemState> sharedState);
     void run();
     void stop();

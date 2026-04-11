@@ -1,3 +1,9 @@
+/*
+ * Project: Aegis Governor V2.0
+ * Author: Samarth
+ * Description: Main entry point initializing the system state, decision engine, and web server.
+ */
+
 #include <iostream>
 #include <thread>
 #include <memory>
@@ -5,29 +11,24 @@
 #include "control/DecisionEngine.hpp"
 #include "core/WebServer.hpp"
 
-int main()
-{
+int main() {
     auto sharedState = std::make_shared<aegis::core::SystemState>(80.0);
 
-    // 1. Start the Core Engine (Background Thread)
     auto engine = std::make_shared<aegis::control::DecisionEngine>(sharedState);
     std::thread engineThread(&aegis::control::DecisionEngine::run, engine);
     engineThread.detach();
 
-    // 2. Start the Web Server (Main Thread)
     std::cout << "=== Aegis V2.0 Cloud-Native Backend ===\n";
     std::cout << "[Web] API available at http://localhost:8080/api/status\n";
 
-    // ... inside main ...
     aegis::core::WebServer webServer(sharedState, engine, 8080);
 
-    // Start a simple logger thread to see if the engine is actually updating the vault
-    std::thread diagnosticThread([sharedState]()
-                                 {
-    while (true) {
-        std::cout << "[Diagnostic] Vault CPU: " << sharedState->getCPULoad() << "% | PIDs: " << sharedState->getProcesses().size() << std::endl;
-        std::this_thread::sleep_for(std::chrono::seconds(2));
-    } });
+    std::thread diagnosticThread([sharedState]() {
+        while (true) {
+            std::cout << "[Diagnostic] Vault CPU: " << sharedState->getCPULoad() << "% | PIDs: " << sharedState->getProcesses().size() << std::endl;
+            std::this_thread::sleep_for(std::chrono::seconds(2));
+        }
+    });
     diagnosticThread.detach();
 
     webServer.start();

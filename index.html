@@ -446,21 +446,52 @@
                 const row = document.createElement('tr');
                 const cpuUsage = proc.cpuUsage || 0;
                 const cpuColor = cpuUsage > 10 ? (cpuUsage > 20 ? 'var(--danger)' : 'var(--warning)') : '#0f172a';
-                row.innerHTML = `
-                    <td class="pid-cell">${proc.pid}</td>
-                    <td>${proc.name}</td>
-                    <td style="color: ${cpuColor}; font-weight: 600;">${cpuUsage.toFixed(1)}%</td>
-                    <td><span style="color:${proc.paused ? '#f59e0b':'#16a34a'}; font-weight:700;">${proc.paused ? 'Paused' : 'Running'}</span></td>
-                    <td>
-                        <button class="action-button" onclick="sendAction(${proc.pid}, 'pause')">Pause</button>
-                        <button class="cap-button" onclick="sendAction(${proc.pid}, 'cap', 50)">Cap at 50%</button>
-                    </td>
-                `;
+                
+                const pidCell = document.createElement('td');
+                pidCell.className = 'pid-cell';
+                pidCell.textContent = proc.pid;
+                
+                const nameCell = document.createElement('td');
+                nameCell.textContent = proc.name;
+                
+                const cpuCell = document.createElement('td');
+                cpuCell.style.color = cpuColor;
+                cpuCell.style.fontWeight = '600';
+                cpuCell.textContent = `${cpuUsage.toFixed(1)}%`;
+                
+                const statusCell = document.createElement('td');
+                statusCell.innerHTML = `<span style="color:${proc.paused ? '#f59e0b':'#16a34a'}; font-weight:700;">${proc.paused ? 'Paused' : 'Running'}</span>`;
+                
+                const actionCell = document.createElement('td');
+                const pauseBtn = document.createElement('button');
+                pauseBtn.className = 'action-button';
+                pauseBtn.textContent = 'Pause';
+                pauseBtn.onclick = function() { sendAction(proc.pid, 'pause', 0, this); };
+                
+                const capBtn = document.createElement('button');
+                capBtn.className = 'cap-button';
+                capBtn.textContent = 'Cap at 50%';
+                capBtn.onclick = function() { sendAction(proc.pid, 'cap', 50, this); };
+                
+                actionCell.appendChild(pauseBtn);
+                actionCell.appendChild(capBtn);
+                
+                row.appendChild(pidCell);
+                row.appendChild(nameCell);
+                row.appendChild(cpuCell);
+                row.appendChild(statusCell);
+                row.appendChild(actionCell);
                 tbody.appendChild(row);
             });
         }
 
-        function sendAction(pid, type, limit = 0) {
+        function sendAction(pid, type, limit = 0, button) {
+            if (button) {
+                button.disabled = true;
+                button.textContent = 'Processing...';
+                button.style.backgroundColor = 'var(--warning)';
+            }
+            
             const payload = { pid, type };
             if (type === 'cap') payload.limit = limit;
             fetch(`${API_BASE}/action`, {
@@ -473,7 +504,14 @@
                 return response.json();
             })
             .then(() => fetchStatus())
-            .catch(() => alert(`Failed to send ${type} command.`));
+            .catch(() => alert(`Failed to send ${type} command.`))
+            .finally(() => {
+                if (button) {
+                    button.disabled = false;
+                    button.textContent = type === 'pause' ? 'Pause' : 'Cap at 50%';
+                    button.style.backgroundColor = type === 'pause' ? 'var(--danger)' : 'var(--primary)';
+                }
+            });
         }
 
         function saveConfig() {

@@ -1,22 +1,21 @@
+/*
+ * Project: Aegis Governor V2.0
+ * Author: Samarth
+ * Description: Implementation of process suspension and resumption using POSIX signals.
+ */
+
 #include "control/Governor.hpp"
-#include <signal.h> // POSIX library for system signals
+#include <signal.h>
 
 namespace aegis {
 namespace control {
 
 bool Governor::pauseProcess(int pid) {
-    // kill() returns 0 if the signal was successfully sent
-    if (kill(pid, SIGSTOP) == 0) {
-        return true;
-    }
-    return false; // Failed (usually means we don't have permission, or PID died)
+    return kill(pid, SIGSTOP) == 0;
 }
 
 bool Governor::resumeProcess(int pid) {
-    if (kill(pid, SIGCONT) == 0) {
-        return true;
-    }
-    return false;
+    return kill(pid, SIGCONT) == 0;
 }
 
 }

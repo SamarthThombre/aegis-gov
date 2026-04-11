@@ -1,3 +1,9 @@
+/*
+ * Project: Aegis Governor V2.0
+ * Author: Samarth
+ * Description: Header defining the web server interface for REST API and dashboard serving.
+ */
+
 #pragma once
 #include "httplib.h"
 #include "core/SystemState.hpp"
